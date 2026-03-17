@@ -10,6 +10,10 @@ def calculate_subnet(ip_cidr : str) -> dict:
     prefixlen = network.prefixlen
     total_addresses = network.num_addresses
 
+    first_usable = int(network.network_address) + 1
+    last_usable = int(network.broadcast_address) - 1
+    usable_count = total_addresses - 2 if total_addresses > 2 else 0
+
     return {
         "ip_cidr": ip_cidr,
         "network": network_address,

@@ -22,6 +22,9 @@ def print_subnet(info: dict):
     print(f"Broadcast:     {info['broadcast']}")
     print(f"Netmask:       {info['netmask']} /{info['prefixlen']}")
     print(f"Total address: {info['total_addresses']}\n")
+    print(f"First usable:  {info['first_usable']}")
+    print(f"Last usable:   {info['last_usable']}")
+    print(f"Usable count:  {info['usable_count']}")
 
 if __name__ == "__main__":
     main()
